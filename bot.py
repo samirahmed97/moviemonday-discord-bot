@@ -55,9 +55,8 @@ def random_user(ctx):
     role = discord.utils.get(ctx.guild.roles, name="movie idiots")
     role_list = role.members
     if role in ctx.author.roles:
-        return role_list[random.randrange(len(role_list))].nick + " is the Movie Master!"
+        return role_list[random.randrange(len(role_list))].name + " is the Movie Master!"
     else:
         return "Not a Movie Idiot!"
 
 token = open("C:\\Users\\sahme\\Documents\\DiscordToken\\TOKEN.txt", 'r').read()
-bot.run(token)
